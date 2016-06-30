@@ -70,18 +70,20 @@ function toggleSidebar(toShow,toHide) {
     scrollDownTo(toShow);
 }
 
+var playedVideos = [];
+
 function playerCreator(embedId, playerId, divId) {
     divId = typeof divId !== 'undefined' ? divId : false;
-    if (divId) {
-        $(divId).animate({backgroundColor:'rgba(0,70,70,0.3)',paddingLeft:'.5em',paddingRight:'.5em'}, 350).delay(2000).animate({backgroundColor:'transparent',paddingLeft:'0',paddingRight:'0'},1000);
+    if (playedVideos.indexOf(playerId) == -1) {
+        playedVideos.push(playerId);
+        $('#' + embedId).html('<video id="'+embedId+'player" preload controls autoplay> \n\
+            <source src="./video/'+playerId+'.mp4" /> \n\
+            <source src="./video/'+playerId+'.webm" /> \n\
+        </video>');
+        $('#' + embedId).css('cursor','default');
     }
-    OO.Player.create(embedId, playerId, {'autoplay':true});
 }
 
-function playerScroller(embedId, playerId, divId) {
-    scrollDownTo(('#' + embedId),100);
-    playerCreator(embedId, playerId, divId);
-}
 function getNodePosition(node) {
     var eTop = $(node).offset().top;
     return Math.abs(eTop - $(window).scrollTop());
