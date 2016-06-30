@@ -42,41 +42,19 @@ body {
     text-decoration:none;
     cursor:pointer;
 }
-.opener {
-    background-position: 50% 90%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-attachment: absolute;
-    height: 90%;
+div.title {
     width: 100%;
-    overflow: hidden;
-    position: relative;
-    padding: 0;
-    z-index: -2;
-    margin-bottom:1em;
+    display:block;
+    padding-top:4em;
 }
-#part1intro {
-    background-image:url('../img/project-header.jpg');
-}
-.opener div#title {
-    background-color:rgba(0,0,0,0.15);
-    z-index: -1;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.opener div#title h2 {
+div.title h2 {
     font-size:7em;
     width:100%;
     line-height:1;
-    color:rgba(255,255,255,0.975);
+    color:rgba(0,0,0,0.6);
     font-weight: 700;
     letter-spacing:-1px;
-    text-shadow: 3px 3px 8px rgba(0,0,0,0.75);
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.35);
     padding-top:.25em;
 }
 #adwrapper a.boxclose:hover {
@@ -133,14 +111,14 @@ p.blurb {
     line-height:1.9;
     color:rgba(0,0,0,0.5);
     font-style: italic;
-    text-align: center;
+    text-align: left;
     margin:1em auto 5em;
     font-weight:400;
 }
 p.byline {
     text-align:center;
     font-size:1em;
-    margin-bottom:2.5em;
+    margin-bottom:5em;
 }
 p.published {
     text-transform:uppercase;
@@ -148,7 +126,7 @@ p.published {
     font-weight:400;
     text-transform:uppercase;
     font-size:.85em;
-    margin:2.5em 0;
+    margin:2em 0;
     text-align:center;
     color:rgba(34,34,34,0.8);
 }
@@ -415,8 +393,8 @@ p.lead .has-tip {
     color:#009696;
 }
 div.title h1 {
-    margin:3em auto;
-    text-align: center;
+    margin:1.5em 0;
+    text-align:left;
     font-family:'PT Sans Narrow', Helvetica, Arial, sans-serif !important;
     font-size:3.2em;
     font-weight:400;
@@ -506,10 +484,11 @@ h3.subheading {
     font-weight:700;
     display:block;
     text-align:center;
-    margin:3.5em auto 1.5em;
+    margin:2.5em auto 2em;
     padding:.5em 0;
     width:70%;
-    border-bottom:1px solid rgba(0,0,0,.3);
+    /* border-bottom:1px solid rgba(0,0,0,.3); */
+    letter-spacing: 1em;
 }
 p.small {
     font-size:.7em;
