@@ -7,7 +7,7 @@ var swapped = false;
 var adsloaded = [];
 /* THIS IS CONFIG DATA SPECIFIC TO SITE */
 var showAds = true; //show slide-up leaderboards at bottom
-var slideAds = 3; //number of times to slide up a leaderboard
+var slideAds = 5; //number of times to slide up a leaderboard
 var titleFade = true; //whether to fade the Denver Post logo in the top-bar to show the "DP" and a text title
 
 function revealSocial(type,link,title,image,desc,twvia,twrel) {
