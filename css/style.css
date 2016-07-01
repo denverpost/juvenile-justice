@@ -1483,6 +1483,9 @@ div#footer-bar ul.social li {
     }
 }
 @media (max-width:540px) {
+    div.title {
+        padding-top:2em;
+    }
     div.title h1 {
         font-size:2em;
     }
